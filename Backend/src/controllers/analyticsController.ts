@@ -1,0 +1,3 @@
+import type { RequestHandler } from 'express';
+import { Document } from '../models/Document.js';
+export const summary: RequestHandler = async (req, res) => { const [stats, recent] = await Promise.all([Document.aggregate([{ $match: { owner: new (await import('mongoose')).Types.ObjectId(req.userId) } }, { $group: { _id: null, revenue: { $sum: '$amountPaid' }, outstanding: { $sum: { $subtract: ['$total', '$amountPaid'] } }, documents: { $sum: 1 } } }]), Document.find({ owner: req.userId }).sort({ createdAt: -1 }).limit(5)]); res.json({ success: true, data: { ...(stats[0] ?? { revenue: 0, outstanding: 0, documents: 0 }), recent } }); };

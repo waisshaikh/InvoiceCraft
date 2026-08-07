@@ -1,0 +1,13 @@
+{
+  "name": "invoicepilot",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": ["frontend", "Backend"],
+  "scripts": {
+    "dev": "concurrently -n api,web -c blue,magenta \"npm run dev -w Backend\" \"npm run dev -w frontend\"",
+    "build": "npm run build -w Backend && npm run build -w frontend",
+    "lint": "npm run lint -w Backend && npm run lint -w frontend",
+    "test": "npm run test -w Backend && npm run test -w frontend"
+  },
+  "devDependencies": { "concurrently": "^9.2.1" }
+}
