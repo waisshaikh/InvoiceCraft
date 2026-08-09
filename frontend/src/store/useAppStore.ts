@@ -16,6 +16,8 @@ export const useAppStore = create<State>()(persist((set) => ({
   logout: () => set({ token: null, user: null }),
 }), {
   name: 'invoicepilot-session',
+  version: 2,
+  migrate: (persisted) => ({ ...(persisted as State), theme: 'light' as const }),
   onRehydrateStorage: () => (state) => {
     if (state && typeof document !== 'undefined') {
       document.documentElement.classList.toggle('dark', state.theme === 'dark');

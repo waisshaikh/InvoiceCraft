@@ -6,8 +6,8 @@
     <meta name="theme-color" content="#f6f7fb" />
     <script>
       try {
-        const saved = JSON.parse(localStorage.getItem('invoicepilot-session') || '{}').state;
-        const theme = saved?.theme === 'dark' ? 'dark' : 'light';
+        const stored = JSON.parse(localStorage.getItem('invoicepilot-session') || '{}');
+        const theme = stored.version >= 2 && stored.state?.theme === 'dark' ? 'dark' : 'light';
         document.documentElement.dataset.theme = theme;
         document.documentElement.classList.toggle('dark', theme === 'dark');
       } catch {
