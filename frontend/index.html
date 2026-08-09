@@ -1,1 +1,24 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#f6f7fb"/><link rel="icon" href="/favicon.svg"/><title>InvoicePilot — Professional Business Documents</title></head><body><div id="root"></div><script type="module" src="/src/main.tsx"></script></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f7fb" />
+    <script>
+      try {
+        const saved = JSON.parse(localStorage.getItem('invoicepilot-session') || '{}').state;
+        const theme = saved?.theme === 'dark' ? 'dark' : 'light';
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.classList.toggle('dark', theme === 'dark');
+      } catch {
+        document.documentElement.dataset.theme = 'light';
+      }
+    </script>
+    <link rel="icon" href="/favicon.svg" />
+    <title>InvoicePilot — Professional Business Documents</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
