@@ -44,7 +44,7 @@ export const DocumentPreview = forwardRef<HTMLDivElement, { draft: DocumentDraft
     return (
       <div
         ref={ref}
-        className="print-sheet relative mx-auto min-h-[820px] max-w-[760px] bg-white p-8 text-slate-900 shadow-lg shadow-zinc-900/10 md:p-12"
+        className="print-sheet relative mx-auto min-h-[760px] max-w-[760px] bg-white p-8 text-slate-900 shadow-lg shadow-zinc-900/10 md:p-12"
       >
         <header className="grid grid-cols-[1fr_auto] gap-8 border-b-2 border-slate-900 pb-8">
           <div>
@@ -103,7 +103,7 @@ export const DocumentPreview = forwardRef<HTMLDivElement, { draft: DocumentDraft
 
         <table className="w-full text-sm">
           <thead>
-            <tr className="bg-slate-900 text-left text-[11px] uppercase tracking-wider text-white">
+            <tr className="border-y-2 border-slate-900 text-left text-[11px] uppercase tracking-wider text-slate-700">
               <th className="px-3 py-3">Description</th><th className="px-3">Qty</th>
               <th className="px-3">Rate</th><th className="px-3 text-right">Amount</th>
             </tr>

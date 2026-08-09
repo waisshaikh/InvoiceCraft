@@ -23,5 +23,24 @@ button { cursor: pointer; }
 .glass { border-radius: .75rem !important; }
 main.grid.min-h-screen { background: #f5f6f8; }
 .dark main.grid.min-h-screen { background: #111318; }
-@page { size: A4; margin: 10mm; }
-@media print { header.no-print, .no-print { display:none!important; } body { background:white!important; } .print-sheet { width:190mm!important; min-height:277mm!important; max-width:none!important; box-shadow:none!important; border:0!important; margin:0!important; padding:10mm!important; } }
+@page { size: A4 portrait; margin: 0; }
+@media print {
+  html, body { width: 210mm!important; min-height: 0!important; margin: 0!important; padding: 0!important; background: white!important; }
+  body * { visibility: hidden!important; }
+  .print-sheet, .print-sheet * { visibility: visible!important; }
+  .print-sheet .no-print { display: none!important; }
+  .print-sheet {
+    position: absolute!important;
+    inset: 0 auto auto 0!important;
+    width: 210mm!important;
+    min-height: 0!important;
+    max-width: none!important;
+    margin: 0!important;
+    padding: 12mm 15mm!important;
+    overflow: visible!important;
+    box-shadow: none!important;
+    border: 0!important;
+  }
+  .print-sheet table { break-inside: auto; }
+  .print-sheet tr, .print-sheet footer, .print-sheet header { break-inside: avoid; }
+}
