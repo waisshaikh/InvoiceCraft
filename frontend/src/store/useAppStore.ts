@@ -16,12 +16,17 @@ export const useAppStore = create<State>()(persist((set) => ({
   logout: () => set({ token: null, user: null }),
 }), {
   name: 'invoicepilot-session',
-  version: 2,
+  version: 3,
   migrate: (persisted) => ({ ...(persisted as State), theme: 'light' as const }),
+  merge: (persisted, current) => ({
+    ...current,
+    ...(persisted as Partial<State>),
+    theme: 'light',
+  }),
   onRehydrateStorage: () => (state) => {
     if (state && typeof document !== 'undefined') {
-      document.documentElement.classList.toggle('dark', state.theme === 'dark');
-      document.documentElement.dataset.theme = state.theme;
+      document.documentElement.classList.remove('dark');
+      document.documentElement.dataset.theme = 'light';
     }
   },
 }));
