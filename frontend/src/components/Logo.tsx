@@ -1,2 +1,2 @@
-import { FileText } from 'lucide-react';
-export function Logo() { return <div className="flex items-center gap-2.5 font-bold tracking-tight"><span className="grid h-8 w-8 place-items-center rounded-md bg-blue-600 text-white"><FileText size={17}/></span><span>InvoicePilot</span></div>; }
+import { FileCheck2 } from 'lucide-react';
+export function Logo() { return <div className="flex items-center gap-2.5 font-bold tracking-[-.02em]"><span className="relative grid h-9 w-9 place-items-center overflow-hidden rounded-lg bg-slate-950 text-white shadow-sm dark:bg-blue-600"><span className="absolute bottom-0 left-0 h-1 w-full bg-blue-500"/><FileCheck2 size={18}/></span><span className="text-[17px] text-slate-900 dark:text-white">Invoice<span className="text-blue-600 dark:text-blue-400">Pilot</span></span></div>; }

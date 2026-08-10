@@ -1,0 +1,3 @@
+{
+  "name": "InvoicePilot", "short_name": "InvoicePilot", "description": "Free invoice and quotation generators", "start_url": "/", "display": "standalone", "background_color": "#f7f8fa", "theme_color": "#2563eb", "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}

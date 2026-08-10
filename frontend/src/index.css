@@ -23,6 +23,12 @@ button { cursor: pointer; }
 .glass { border-radius: .75rem !important; }
 main.grid.min-h-screen { background: #f5f6f8; }
 .dark main.grid.min-h-screen { background: #111318; }
+.info-content { color: #52525b; line-height: 1.75; }
+.info-content h2 { margin-top: 2rem; color: #18181b; font-size: 1.25rem; font-weight: 700; letter-spacing: -.015em; }
+.info-content p { margin-top: .75rem; }
+.info-content a { color: #1d4ed8; text-decoration: underline; text-underline-offset: 3px; }
+.dark .info-content { color: #a1a1aa; }
+.dark .info-content h2 { color: #fafafa; }
 @page { size: A4 portrait; margin: 0; }
 @media print {
   html, body { width: 210mm!important; min-height: 0!important; margin: 0!important; padding: 0!important; background: white!important; }

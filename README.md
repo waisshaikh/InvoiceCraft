@@ -11,4 +11,17 @@ Production-oriented MERN SaaS for creating invoices, quotations, receipts and ot
 
 The API runs on `http://localhost:5000`. Generators work locally without an account; authenticated users can sync documents to MongoDB.
 
+## Google AdSense
+
+The public frontend is configured for optional responsive AdSense placements. Set these variables in `frontend/.env` and in Vercel:
+
+```env
+VITE_ADSENSE_CLIENT=ca-pub-XXXXXXXXXXXXXXXX
+VITE_ADSENSE_TOP_SLOT=1234567890
+```
+
+Ads remain disabled when either value is empty. Before enabling personalized ads, configure the consent flow required for the countries you serve and replace the example contact email/domain in the legal pages. Add an `ads.txt` file only after Google provides the exact publisher line for the approved account.
+
+The canonical URLs and sitemap currently use `https://invoicepilot.app`. Replace this domain everywhere if the production domain is different, then submit `/sitemap.xml` in Google Search Console.
+
 See [ARCHITECTURE.md](./ARCHITECTURE.md) for modules, API routes, schemas, deployment, and testing.
