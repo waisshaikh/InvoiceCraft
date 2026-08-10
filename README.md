@@ -22,6 +22,6 @@ VITE_ADSENSE_TOP_SLOT=1234567890
 
 Ads remain disabled when either value is empty. Before enabling personalized ads, configure the consent flow required for the countries you serve and replace the example contact email/domain in the legal pages. Add an `ads.txt` file only after Google provides the exact publisher line for the approved account.
 
-The canonical URLs and sitemap currently use `https://invoicepilot.app`. Replace this domain everywhere if the production domain is different, then submit `/sitemap.xml` in Google Search Console.
+The production canonical domain is `https://invoicepilotapp.com`. Submit `https://invoicepilotapp.com/sitemap.xml` in Google Search Console after deployment.
 
 See [ARCHITECTURE.md](./ARCHITECTURE.md) for modules, API routes, schemas, deployment, and testing.

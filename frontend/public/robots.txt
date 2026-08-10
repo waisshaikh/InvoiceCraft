@@ -2,5 +2,5 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://invoicepilot.app/sitemap.xml
-Host: https://invoicepilot.app
+Sitemap: https://invoicepilotapp.com/sitemap.xml
+Host: https://invoicepilotapp.com
