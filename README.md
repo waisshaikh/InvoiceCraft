@@ -11,6 +11,8 @@ Production-oriented MERN SaaS for creating invoices, quotations, receipts and ot
 
 The API runs on `http://localhost:5000`. Generators work locally without an account; authenticated users can sync documents to MongoDB.
 
+For production, configure the backend with `CLIENT_URL=https://invoicepilotapp.com,https://www.invoicepilotapp.com` and the frontend with `VITE_API_URL=https://api.invoicepilotapp.com/api/v1`. Keep `http://localhost:5173` in the backend allowlist only when local frontend access is required.
+
 ## Google AdSense
 
 The public frontend is configured for optional responsive AdSense placements. Set these variables in `frontend/.env` and in Vercel:
